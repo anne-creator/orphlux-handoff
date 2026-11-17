@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Three video frames record a moving object and its action trajectory</title>
+  <defs>
+    <linearGradient id="pane" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dbe6ee" stop-opacity=".055"/><stop offset="1" stop-color="#dbe6ee" stop-opacity=".012"/></linearGradient>
+    <g id="frame" stroke="#dbe6ee" stroke-linejoin="round">
+      <rect width="108" height="91" rx="3" fill="url(#pane)" stroke-opacity=".62"/>
+      <path d="M0 12h108" stroke-opacity=".24"/>
+      <path d="M9 6h8m4 0h4" stroke-opacity=".55"/>
+      <path d="M8 65l42-20 49 23-42 18Z M23 72l42-20 M39 79l41-20 M22 58l49 23 M35 52l49 22" stroke-opacity=".22" stroke-width=".7"/>
+      <path d="M65 59V40l14-7 14 7v19l-14 7Z M65 40l14 7 14-7 M79 47v19" stroke-opacity=".69"/>
+      <path d="M9 81h7m76 0h7" stroke-opacity=".4"/>
+    </g>
+  </defs>
+  <g stroke-width="1">
+    <use href="#frame" x="27" y="88"/>
+    <use href="#frame" x="145" y="62"/>
+    <use href="#frame" x="263" y="36"/>
+  </g>
+  <g stroke="#dbe6ee" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M50 153l12-6 11 5-12 6Z M50 153v7l11 5 12-6v-7 M61 158v7" fill="#dbe6ee" fill-opacity=".07" stroke-opacity=".86"/>
+    <path d="M181 121l12-6 11 5-12 6Z M181 121v7l11 5 12-6v-7 M192 126v7" fill="#dbe6ee" fill-opacity=".07" stroke-opacity=".86"/>
+    <path d="M311 89l12-6 11 5-12 6Z M311 89v7l11 5 12-6v-7 M322 94v7" fill="#dbe6ee" fill-opacity=".07" stroke-opacity=".86"/>
+    <path d="M131 131l9-2m-3-3 3 3-2 4 M249 105l9-2m-3-3 3 3-2 4" stroke-opacity=".65"/>
+    <path d="M52 199h290" stroke-opacity=".35"/>
+    <path d="M339 196l4 3-4 3" stroke-opacity=".65"/>
+    <path d="M81 188v22 M199 188v22 M317 188v22" stroke-opacity=".38"/>
+    <path d="M81 180v-1 M199 178v-21 M317 178v-47" stroke-opacity=".18" stroke-dasharray="2 5"/>
+  </g>
+  <g stroke="#BC2F5E" stroke-width="1.5" stroke-linecap="round"><path d="M74 158l13-6m-5-2 5 2-2 5 M205 126l13-6m-5-2 5 2-2 5 M335 94l13-6m-5-2 5 2-2 5"/></g>
+  <g fill="#dbe6ee"><circle cx="81" cy="199" r="2.5"/><circle cx="199" cy="199" r="2.5"/><circle cx="317" cy="199" r="2.5"/></g>
+</svg>

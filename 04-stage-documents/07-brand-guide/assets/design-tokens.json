@@ -1,0 +1,105 @@
+{
+  "name": "OrphLux website design system",
+  "version": "2026-11-05",
+  "colors": {
+    "canvasDark": "#050607",
+    "titleDark": "#F5F5F6",
+    "bodyDark": "#C9CBD0",
+    "mutedDark": "#A0A5AD",
+    "accent": "#BC2F5E",
+    "accentHover": "#A92853",
+    "accentActive": "#942348",
+    "onAccent": "#FFFFFF",
+    "illustrationDark": "#C9D5DE",
+    "illustrationLight": "#46515C",
+    "surfaceGraphite": "#10161C",
+    "surfaceGraphiteEnd": "#18222B",
+    "surfaceCatalogue": "#070A0E",
+    "surfaceReading": "#0C1116"
+  },
+  "typography": {
+    "homepageDisplay": "Archivo Regular",
+    "innerpageDisplay": "Archivo Semibold",
+    "body": "IBM Plex"
+  },
+  "spacing": [
+    8,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "icons": {
+    "viewBox": [
+      0,
+      0,
+      32,
+      32
+    ],
+    "stroke": 1.5,
+    "cap": "round",
+    "join": "round"
+  },
+  "illustrations": {
+    "width": 400,
+    "height": 260,
+    "background": "transparent",
+    "density": "balanced",
+    "stroke": 1.3,
+    "paneOpacity": 0.68,
+    "paneFillOpacity": 0.015,
+    "auxiliaryOpacity": 0.5,
+    "connections": "smooth curves",
+    "system": "Structured Flow / sleek revision",
+    "accentStroke": 1.5
+  },
+  "motion": {
+    "heroCycleMs": 24000,
+    "samples": 6,
+    "hoverColorMs": 160,
+    "arrowMs": 180,
+    "arrowPx": 2,
+    "dialogMs": 220,
+    "dialogPx": 4,
+    "reducedMotion": "static",
+    "contentReveal": "none",
+    "serviceMode": "once on first visible entry",
+    "servicePathMs": 1800,
+    "serviceConfirmMs": 700,
+    "serviceStaggerMs": 180,
+    "serviceMaxMs": 2640,
+    "serviceOffscreen": "pause",
+    "serviceManualPause": "shared with hero"
+  },
+  "responsive": {
+    "homeCompactNavMaxPx": 720,
+    "innerSingleColumnMaxPx": 760
+  },
+  "status": "Application rules for current website direction; official name etymology pending.",
+  "transitions": {
+    "glowBase": "#140910",
+    "glowAccent": "#BC2F5E",
+    "glowEdgeTint": "#F6A1BB",
+    "glowText": "#FFFFFF",
+    "maxGlowingBannersPerPage": 1,
+    "animation": "none",
+    "silverCandidates": [
+      "mist",
+      "arc",
+      "sheen"
+    ],
+    "silverSelection": [
+      "mist",
+      "sheen"
+    ],
+    "silverPlacement": {
+      "mist": "Physical AI bottom, before datasets (trial)",
+      "sheen": "footer, before contact heading"
+    },
+    "silverDesktopHeight": "clamp(170px,20vw,280px)",
+    "silverMobileHeightPx": 150,
+    "maxSilverTransitionsPerPage": 2
+  },
+  "surfaces": "dark only; silver is a local light field, not a page background"
+}
