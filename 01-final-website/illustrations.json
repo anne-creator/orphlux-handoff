@@ -1,0 +1,44 @@
+{
+  "world-model-video.3c840d8a.webp": {
+    "file": "unified/dataset-world-dark.svg",
+    "width": 400,
+    "height": 260,
+    "alt": "Three video frames track an object across time with aligned sample markers.",
+    "caption": null
+  },
+  "long-cot.a214c252.webp": {
+    "file": "unified/dataset-reasoning-dark.svg",
+    "width": 400,
+    "height": 260,
+    "alt": "A reasoning trace branches, follows a selected path and reaches a verified answer.",
+    "caption": null
+  },
+  "gui-operation.6ff514ce.webp": {
+    "file": "unified/dataset-gui-dark.svg",
+    "width": 400,
+    "height": 260,
+    "alt": "A recorded interface action selects a row and produces a verified interaction record.",
+    "caption": null
+  },
+  "coding-agent-evaluation.d2c40b6e.webp": {
+    "file": "unified/dataset-coding-dark.svg",
+    "width": 400,
+    "height": 260,
+    "alt": "A code task runs through three structured, verified test outcomes.",
+    "caption": null
+  },
+  "aesthetic-generative-quality.a3850421.webp": {
+    "file": "unified/dataset-aesthetic-dark.svg",
+    "width": 400,
+    "height": 260,
+    "alt": "Two generated-image samples support a consistent visual-quality comparison and verified selection.",
+    "caption": null
+  },
+  "anime-video-creatives.af02a0a2.webp": {
+    "file": "unified/dataset-anime-dark.svg",
+    "width": 400,
+    "height": 260,
+    "alt": "Three storyboard frames preserve a character pose across an ordered animation sequence.",
+    "caption": null
+  }
+}

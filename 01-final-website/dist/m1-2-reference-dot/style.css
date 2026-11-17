@@ -1,0 +1,44 @@
+.m12-reference-status,.m12-reference-credit{display:none}
+:root[data-m12-hero="reference-dot"] .m12-reference-status{display:inline;font-size:10px;color:#c9bdad}
+:root[data-m12-hero="reference-dot"] .m12-reference-credit{display:inline;font-size:10px;color:#777d87;margin-left:4px}
+:root[data-m12-hero="reference-dot"] #m12-comparison button:disabled{opacity:.35;cursor:default}
+:root[data-m12-hero="reference-dot"] .hero{
+  height:100svh;min-height:660px;display:flex;flex-direction:column;overflow:hidden;
+}
+:root[data-m12-hero="reference-dot"] .hero .hero-copy{
+  flex:1;min-height:0;padding:110px 24px 32px;
+}
+:root[data-m12-hero="reference-dot"][data-reference-font="ready"] .hero #hero-title,
+:root[data-m12-hero="reference-dot"][data-reference-font="ready"] .hero #hero-title>span{
+  font-family:"BubbledotICG-FinePos",var(--meeting-display),monospace!important;font-weight:400;
+}
+:root[data-m12-hero="reference-dot"] .hero #hero-title,
+:root[data-m12-hero="reference-dot"] .hero #hero-title>span{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}
+:root[data-m12-hero="reference-dot"] .hero #hero-title>.hero-tech-text,
+:root[data-m12-hero="reference-dot"] #motion-tech-text{display:none!important;pointer-events:none!important}
+:root[data-m12-hero="reference-dot"] .hero>.company-proof{
+  flex-shrink:0;width:100%;background:transparent;border:0;
+}
+:root[data-m12-hero="reference-dot"] .hero>.company-proof dl{padding:24px 0 32px}
+@media(max-width:720px){
+ :root[data-m12-hero="reference-dot"] .hero{min-height:700px}
+ :root[data-m12-hero="reference-dot"] .hero .hero-copy{padding:104px 24px 16px}
+ :root[data-m12-hero="reference-dot"] .hero>.company-proof dl{padding:8px 0 20px}
+ :root[data-m12-hero="reference-dot"] .hero>.company-proof dl>div{padding:14px 16px}
+}
+
+:root[data-m12-hero="reference-dot"] .hero>.company-proof dl{padding-bottom:56px}
+/* Keep existing white copy legible over the reference clip's bright upper field. */
+:root[data-m12-hero="reference-dot"] .m12-original-video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0009 0%,#0007 48%,#0002 80%,transparent 100%);pointer-events:none}
+@media(max-width:720px){:root[data-m12-hero="reference-dot"] .m12-original-video::after{background:linear-gradient(180deg,#000a 0%,#0009 48%,#0003 75%,transparent 100%)}}
+@media(max-width:370px){:root[data-m12-hero="reference-dot"][data-reference-font="ready"] .hero #hero-title{font-size:28px}}
+
+/* Reference stats sizing from Anne's original supplied specification. */
+:root[data-m12-hero="reference-dot"] .hero>.company-proof dl{max-width:920px;margin-inline:auto}
+:root[data-m12-hero="reference-dot"] .hero>.company-proof dd{font-size:clamp(18px,2.2vw,26px);letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+:root[data-m12-hero="reference-dot"] .hero>.company-proof dd span{font-size:1em}
+:root[data-m12-hero="reference-dot"] .hero>.company-proof dt{font-size:clamp(11px,1.2vw,12.5px)}
+.reference-dot-scatter{display:none;position:absolute;inset:-320px;width:calc(100% + 640px);height:calc(100% + 640px);pointer-events:none}
+:root[data-m12-hero="reference-dot"] #hero-title.dot-scatter-ready{position:relative}
+:root[data-m12-hero="reference-dot"] #hero-title.dot-scatter-ready>span{opacity:0!important}
+:root[data-m12-hero="reference-dot"] #hero-title.dot-scatter-ready>.reference-dot-scatter{display:block}

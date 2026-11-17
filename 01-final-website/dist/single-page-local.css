@@ -1,0 +1,17 @@
+/* Preserve the visual presentation while navigation destinations are inactive. */
+body.dark-home a[data-static-link]{cursor:default}
+
+/* Shared text-hover treatment across every local section and comparison variant. */
+body.dark-home a:hover,
+body.dark-home a:hover *{text-decoration-line:none!important}
+
+/* Selected numeric grasp sits above the white atmosphere and beneath the copy. */
+body.dark-home section.open-data-band .open-data::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:url('/m1-2-open-data-physical/02-numeric-grasp-balanced.png') center bottom/cover no-repeat;
+  opacity:.3;
+  pointer-events:none;
+}

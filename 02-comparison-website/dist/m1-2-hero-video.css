@@ -1,0 +1,15 @@
+.m12-original-video{position:absolute;inset:0;z-index:-1;pointer-events:none;background:#020304 url('/m1-2-hero-video/poster-v2.jpg') center/cover no-repeat;display:none;overflow:hidden}
+.m12-original-video video{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0}
+.m12-original-video video[data-ready="true"]{opacity:1}
+.hero .motion-control{display:none!important}
+:root:is([data-m12-hero="video"],[data-m12-hero="jimeng"],[data-m12-hero="jimeng2"],[data-m12-hero="reference-dot"]) .hero>.m12-original-video{display:block}
+:root:is([data-m12-hero="video"],[data-m12-hero="jimeng"],[data-m12-hero="jimeng2"],[data-m12-hero="reference-dot"]) .hero>:is(.hero-art,.reference-atmosphere,.hero-light,.grain){visibility:hidden!important}
+#m12-comparison .m12-hero-choices{display:flex;flex-wrap:wrap;align-items:center;gap:3px;grid-column:1/-1;padding-top:4px;border-top:1px solid #ffffff0d}
+#m12-comparison .m12-hero-label{font-size:10px;font-weight:400;color:#777d87;margin-right:3px;white-space:nowrap}
+#m12-comparison .m12-hero-choices [hidden]{display:none!important}
+#m12-comparison .m12-video-error{font-size:11px;color:#f2c6d1}
+@media(prefers-reduced-motion:reduce){.m12-original-video video{display:none}}
+/* Center the complete copy group, matching the VEX composition. */
+.hero .hero-copy{box-sizing:border-box;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 24px 120px}
+@media(max-width:720px){.hero .hero-copy{padding:120px 24px 140px}}
+@media(max-height:650px){.hero .hero-copy{padding-top:105px;padding-bottom:105px}}

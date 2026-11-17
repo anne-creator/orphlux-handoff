@@ -1,0 +1,111 @@
+/* Meeting R1 / 07. Explicit CTA/control scope; no typography or artwork changes. */
+html body.dark-home :is(.button.button, .nav-contact.nav-contact, .menu.menu, .close.close, .motion-control.motion-control),
+html body.dark-home #contact-form .button.button,
+html body.dark-home section.open-data-band .inline-link {
+  --r1-button-bg: #bc2f5e;
+  --r1-button-hover: #a82853;
+  --r1-button-active: #902145;
+  background: var(--r1-button-bg);
+  color: #fff;
+  border: 1px solid #bc2f5e;
+  box-shadow: none;
+  transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+html body.dark-home :is(.button.secondary, .menu.menu, .close.close, .motion-control.motion-control) {
+  --r1-button-bg: #1b0c12;
+  --r1-button-hover: #35121f;
+  --r1-button-active: #50172b;
+  border-color: #bc2f5e;
+}
+/* Remove the previous silver glass edge, retaining existing geometry. */
+html body.dark-home :is(.button.secondary, .menu.menu, .motion-control.motion-control)::before { content: none; }
+html body.dark-home :is(.button.button, .nav-contact.nav-contact, .menu.menu, .close.close, .motion-control.motion-control):hover,
+html body.dark-home #contact-form .button.button:hover,
+html body.dark-home section.open-data-band .inline-link:hover {
+  background: var(--r1-button-hover);
+  color: #fff;
+  border-color: #d6537d;
+  box-shadow: 0 0 16px #bc2f5e38;
+}
+html body.dark-home :is(.button.button, .nav-contact.nav-contact, .menu.menu, .close.close, .motion-control.motion-control):active,
+html body.dark-home #contact-form .button.button:active,
+html body.dark-home section.open-data-band .inline-link:active {
+  background: var(--r1-button-active);
+  color: #fff;
+  border-color: #e5809f;
+  box-shadow: inset 0 1px 3px #0005;
+}
+html body.dark-home :is(.button.button, .nav-contact.nav-contact, .menu.menu, .close.close, .motion-control.motion-control):focus-visible,
+html body.dark-home #contact-form .button.button:focus-visible,
+html body.dark-home section.open-data-band .inline-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 3px #140a0e, 0 0 18px #bc2f5e40;
+}
+html body.dark-home :is(.menu.menu[aria-expanded=true], .motion-control.motion-control[aria-pressed=true]) {
+  background: #50172b;
+  border-color: #e5809f;
+}
+html body.dark-home :is(button.button:disabled, .button.button[aria-disabled=true], .menu.menu:disabled, .close.close:disabled, .motion-control.motion-control:disabled) {
+  background: #35232a;
+  color: #c1b4b9;
+  border-color: #63404c;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+/* Dim the existing sparse star image and corner film as one dedicated layer.
+   This preserves all masks, playback controls and the independent hero artwork. */
+html body.dark-home .hero > .reference-atmosphere { opacity: .42; }
+@media (max-width: 720px) {
+  html body.dark-home .hero > .reference-atmosphere { opacity: .32; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body.dark-home :is(.button.button, .nav-contact.nav-contact, .menu.menu, .close.close, .motion-control.motion-control),
+  html body.dark-home #contact-form .button.button,
+  html body.dark-home section.open-data-band .inline-link { transition: none; }
+}
+html.motion-off body.dark-home :is(.button.button, .nav-contact.nav-contact, .menu.menu, .close.close, .motion-control.motion-control),
+html.motion-off body.dark-home #contact-form .button.button,
+html.motion-off body.dark-home section.open-data-band .inline-link { transition: none; }
+
+/* M1.2 shared service CTA: VEX Explore Now silver glass treatment. */
+html body.dark-home .hero-actions .button.secondary {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, .4);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .1);
+}
+html body.dark-home .hero-actions .button.secondary::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg, #ffffff4d 0%, #ffffff1a 20%, #ffffff00 40%, #ffffff00 60%, #ffffff1a 80%, #ffffff4d 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+html body.dark-home .hero-actions .button.secondary:hover {
+  background: #fff;
+  color: #000;
+  border-color: transparent;
+  box-shadow: inset 0 1px 1px #ffffff1a;
+}
+html body.dark-home .hero-actions .button.secondary:active {
+  background: #e5e7eb;
+  color: #000;
+  border-color: transparent;
+  box-shadow: none;
+}
+html body.dark-home .hero-actions .button.secondary:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 3px #08090b;
+}

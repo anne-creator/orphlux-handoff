@@ -1,0 +1,114 @@
+{
+  "version": 3,
+  "system": "Structured Flow",
+  "illustrations": {
+    "collection": {
+      "dark": "collection-dark.svg",
+      "light": "collection-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "Different real-world image, audio and point samples converge into three aligned data records."
+    },
+    "annotation": {
+      "dark": "annotation-dark.svg",
+      "light": "annotation-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "An image sample is isolated with a precise annotation bracket and connected to its labeled record."
+    },
+    "evaluation": {
+      "dark": "evaluation-dark.svg",
+      "light": "evaluation-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "Three data records pass a quality checkpoint and form a consistent verified output set."
+    },
+    "dataset-world": {
+      "dark": "dataset-world-dark.svg",
+      "light": "dataset-world-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "Three video frames track an object across time with aligned sample markers."
+    },
+    "dataset-reasoning": {
+      "dark": "dataset-reasoning-dark.svg",
+      "light": "dataset-reasoning-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "A reasoning trace branches, follows a selected path and reaches a verified answer."
+    },
+    "dataset-gui": {
+      "dark": "dataset-gui-dark.svg",
+      "light": "dataset-gui-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "A recorded interface action selects a row and produces a verified interaction record."
+    },
+    "dataset-coding": {
+      "dark": "dataset-coding-dark.svg",
+      "light": "dataset-coding-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "A code task runs through three structured, verified test outcomes."
+    },
+    "dataset-aesthetic": {
+      "dark": "dataset-aesthetic-dark.svg",
+      "light": "dataset-aesthetic-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "Two generated-image samples support a consistent visual-quality comparison and verified selection."
+    },
+    "dataset-anime": {
+      "dark": "dataset-anime-dark.svg",
+      "light": "dataset-anime-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "Three storyboard frames preserve a character pose across an ordered animation sequence."
+    },
+    "research-flow": {
+      "dark": "research-flow-dark.svg",
+      "light": "research-flow-light.svg",
+      "width": 400,
+      "height": 260,
+      "alt": "Raw input passes through verification and becomes ready data."
+    }
+  },
+  "icons": {
+    "collection": "icon-collection.svg",
+    "annotation": "icon-annotation.svg",
+    "evaluation": "icon-evaluation.svg",
+    "01-ego": "icon-01-ego.svg",
+    "02-gripper": "icon-02-gripper.svg",
+    "03-robot": "icon-03-robot.svg",
+    "04-hand": "icon-04-hand.svg",
+    "05-simulation": "icon-05-simulation.svg",
+    "arrow": "icon-arrow.svg",
+    "arrow-right": "icon-arrow-right.svg",
+    "menu": "icon-menu.svg",
+    "close": "icon-close.svg",
+    "pause": "icon-pause.svg",
+    "play": "icon-play.svg",
+    "check": "icon-check.svg"
+  },
+  "themes": {
+    "dark": "#C9D5DE",
+    "light": "#46515C",
+    "accent": "#BC2F5E"
+  },
+  "original_mapping": {
+    "world-model-video.3c840d8a.webp": "dataset-world",
+    "long-cot.a214c252.webp": "dataset-reasoning",
+    "gui-operation.6ff514ce.webp": "dataset-gui",
+    "coding-agent-evaluation.d2c40b6e.webp": "dataset-coding",
+    "aesthetic-generative-quality.a3850421.webp": "dataset-aesthetic",
+    "anime-video-creatives.af02a0a2.webp": "dataset-anime"
+  },
+  "detail_route_mapping": {
+    "terminal-bench-v3": "dataset-coding",
+    "deepswe": "dataset-coding",
+    "swe-bench-pro-max": "dataset-coding",
+    "agents-last-exam": "evaluation",
+    "benchmark-targeted-training": "evaluation",
+    "humanitys-last-exam": "dataset-reasoning"
+  }
+}

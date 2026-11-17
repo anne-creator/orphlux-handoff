@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 300" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#9299a3"/><stop offset=".36" stop-color="#d0d3d9"/><stop offset=".68" stop-color="#eceef1"/><stop offset="1" stop-color="#adb2bc"/>
+    </linearGradient>
+    <radialGradient id="white" cx=".62" cy=".5" r=".6"><stop stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff"/><stop offset=".38" stop-color="#fff"/><stop offset=".5" stop-color="#fff"/><stop offset=".6" stop-color="#f5a7bf"/><stop offset=".72" stop-color="#d92e63"/><stop offset=".84" stop-color="#f5a7bf"/><stop offset=".94" stop-color="#fff"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <linearGradient id="bottom" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff"/><stop offset=".06" stop-color="#fff"/><stop offset=".16" stop-color="#f5a7bf"/><stop offset=".28" stop-color="#dc2e64"/><stop offset=".4" stop-color="#f5a7bf"/><stop offset=".5" stop-color="#fff"/><stop offset=".62" stop-color="#fff"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <filter id="ribbon-glow" x="0" y="-100%" width="100%" height="300%"><feGaussianBlur stdDeviation="3" result="bloom"/><feMerge><feMergeNode in="bloom"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="panel"><rect width="1600" height="300"/></clipPath>
+    <filter id="material-grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".42 .48" numOctaves="3" seed="11" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="linear" slope="1.5" intercept="-.25"/><feFuncG type="linear" slope="1.5" intercept="-.25"/><feFuncB type="linear" slope="1.5" intercept="-.25"/></feComponentTransfer></filter>
+    <pattern id="brushed" width="28" height="4" patternUnits="userSpaceOnUse"><path d="M0 .5h28" stroke="#e0e5eb" stroke-opacity=".035" stroke-width=".5"/><path d="M0 2.5h28" stroke="#1c2530" stroke-opacity=".025" stroke-width=".5"/></pattern>
+  </defs>
+  <g clip-path="url(#panel)">
+    <path fill="url(#surface)" d="M0 0h1600v300H0z"/>
+    <path fill="url(#white)" d="M0 0h1600v300H0z"/>
+    <path fill="url(#brushed)" d="M0 0h1600v300H0z"/>
+    <path filter="url(#material-grain)" opacity=".2" d="M0 0h1600v300H0z"/>
+  </g>
+  <rect width="1600" height="16" fill="url(#top)" filter="url(#ribbon-glow)"/>
+  <rect y="284" width="1600" height="16" fill="url(#bottom)" filter="url(#ribbon-glow)"/>
+</svg>

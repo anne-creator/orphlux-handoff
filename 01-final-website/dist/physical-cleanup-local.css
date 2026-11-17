@@ -1,0 +1,53 @@
+/* Physical AI: quiet dividers and two columns for icon and method title. */
+#physical .capture-method{grid-template-columns:42px minmax(0,1fr);border-color:#2c333b}
+@media(max-width:720px){#physical .capture-method{grid-template-columns:32px minmax(0,1fr)}}
+
+/* Align the introduction and methods without changing shared content markup. */
+#physical > .section-wrap{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);
+  grid-template-rows:auto 1fr;
+  column-gap:clamp(48px,6vw,88px);
+  row-gap:26px;
+  padding-bottom:24px;
+}
+#physical .section-title-row{grid-column:1;grid-row:1;margin-bottom:0}
+#physical .physical-layout{display:contents}
+#physical .physical-copy{grid-column:1;grid-row:2;align-self:start}
+#physical .physical-copy p{max-width:420px;margin:0;font-size:18px;line-height:1.65}
+#physical .capture-methods{grid-column:2;grid-row:1/3;margin-top:0;align-self:start}
+#physical .capture-method{
+  grid-template-columns:36px minmax(0,1fr);
+  gap:18px;
+  min-height:84px;
+  padding:20px 8px;
+}
+#physical .capture-method h3{font-size:24px;line-height:1.3}
+#physical .method-icon{width:36px;height:36px}
+#physical > .silver-transition{height:120px}
+#physical .capture-method:focus-visible{outline:1px solid #b9c6d1;outline-offset:3px;background:#ffffff06}
+@media(max-width:900px){
+  #physical > .section-wrap{column-gap:36px}
+  #physical .section-title-row h2{font-size:38px}
+  #physical .capture-method h3{font-size:22px}
+  #physical .capture-method{gap:14px}
+}
+@media(max-width:720px){
+  #physical > .section-wrap{display:block;padding-bottom:12px}
+  #physical .section-title-row{margin-bottom:24px}
+  #physical .section-title-row h2{font-size:37px}
+  #physical .physical-copy p{max-width:530px;font-size:17px;line-height:1.6}
+  #physical .capture-methods{margin-top:28px}
+  #physical .capture-method{grid-template-columns:32px minmax(0,1fr);min-height:76px;padding:18px 0;gap:16px}
+  #physical .method-icon{width:32px;height:32px}
+  #physical .capture-method h3{font-size:21px}
+  #physical > .silver-transition{height:90px}
+}
+@media(prefers-reduced-motion:reduce){#physical .capture-method{transition:none}}
+
+/* Match the Research list to the same subdued divider tone. */
+#research .research-directions li{border-color:#2c333b}
+
+/* Research entries no longer reserve a decorative numbering column. */
+#research .research-directions li{grid-template-columns:minmax(0,1fr)}
+#research .research-status{grid-column:1}

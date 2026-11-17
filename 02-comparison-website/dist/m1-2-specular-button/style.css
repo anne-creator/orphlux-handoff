@@ -1,0 +1,19 @@
+/* Only the service CTA adopts SpecularButton. Existing type, size and radius stay. */
+html body.dark-home .hero-actions a.button.secondary.m12-specular {
+  position:relative; isolation:isolate; overflow:visible;
+  background:rgba(255,255,255,.04); color:#f5f5f5;
+  border-color:#52525299; box-shadow:none;
+  backdrop-filter:none; -webkit-backdrop-filter:none;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1);
+}
+html body.dark-home .hero-actions a.button.secondary.m12-specular::before,
+html body.dark-home .hero-actions a.button.secondary.m12-specular::after {content:none}
+html body.dark-home .hero-actions a.button.secondary.m12-specular.specular-ready {border-color:transparent}
+html body.dark-home .hero-actions a.button.secondary.m12-specular:active {transform:scale(.97)}
+html body.dark-home .hero-actions a.button.secondary.m12-specular:focus-visible {outline:2px solid #f5f5f58c;outline-offset:4px}
+.hero-actions .m12-specular-light {position:absolute;z-index:1;display:block;pointer-events:none;max-width:none}
+.hero-actions .m12-specular-label {position:relative;z-index:2;display:inline-flex;align-items:center;gap:inherit}
+@media(prefers-reduced-motion:reduce){
+  html body.dark-home .hero-actions a.button.secondary.m12-specular {transition:none}
+  html body.dark-home .hero-actions a.button.secondary.m12-specular:active {transform:none}
+}

@@ -1,0 +1,121 @@
+{
+  "collection": {
+    "format": "WEBP",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 942323,
+    "partially_transparent_pixels": 136922,
+    "bytes": 71524,
+    "edited_with": "built-in Imagegen",
+    "source_png": "output/transparent-art-2026-11-05/collection.png"
+  },
+  "annotation": {
+    "format": "WEBP",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 874597,
+    "partially_transparent_pixels": 204989,
+    "bytes": 107544,
+    "edited_with": "built-in Imagegen",
+    "source_png": "output/transparent-art-2026-11-05/annotation.png"
+  },
+  "evaluation": {
+    "format": "WEBP",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 877704,
+    "partially_transparent_pixels": 201821,
+    "bytes": 80928,
+    "edited_with": "built-in Imagegen",
+    "source_png": "output/transparent-art-2026-11-05/evaluation.png"
+  },
+  "dataset-world": {
+    "format": "WEBP",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 709230,
+    "partially_transparent_pixels": 369102,
+    "bytes": 155352,
+    "edited_with": "built-in Imagegen",
+    "source_png": "output/transparent-art-2026-11-05/dataset-world.png"
+  },
+  "dataset-reasoning": {
+    "format": "WEBP",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 929702,
+    "partially_transparent_pixels": 149201,
+    "bytes": 85800,
+    "edited_with": "built-in Imagegen",
+    "source_png": "output/transparent-art-2026-11-05/dataset-reasoning.png"
+  },
+  "dataset-gui": {
+    "format": "WEBP",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 736604,
+    "partially_transparent_pixels": 341772,
+    "bytes": 92074,
+    "edited_with": "built-in Imagegen",
+    "source_png": "output/transparent-art-2026-11-05/dataset-gui.png"
+  },
+  "hero-I": {
+    "format": "WEBP",
+    "dimensions": [
+      1914,
+      822
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      253
+    ],
+    "fully_transparent_pixels": 1027797,
+    "partially_transparent_pixels": 545511,
+    "bytes": 484370,
+    "edited_with": "built-in Imagegen",
+    "source_png": "output/transparent-art-2026-11-05/hero-I.png"
+  }
+}

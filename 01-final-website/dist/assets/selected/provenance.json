@@ -1,0 +1,51 @@
+{
+  "hero-I": {
+    "source": "output/hero-keyframes-2026-11-05/round-3/orphlux-hero-I.png",
+    "source_sha256": "ea0ae28024f42701384d9eed44b2cd960ab694af6a413e6e0e7fefda018e9867",
+    "width": 3136,
+    "height": 1344,
+    "bytes": 380808
+  },
+  "collection": {
+    "source": "output/illustration-weight-study-2026-11-05/round-c2-family/orphlux-1D.png",
+    "source_sha256": "ec686a9ec6135c5a9831a10a690b78ecd99e2ee790f2c7603aa8eefcc47e7c1e",
+    "width": 1200,
+    "height": 900,
+    "bytes": 37836
+  },
+  "annotation": {
+    "source": "output/illustration-weight-study-2026-11-05/round-c-light/orphlux-C2.png",
+    "source_sha256": "079c643fc36e72a0d475a6fb9020ec143fa03f8adcacd4c85617a3fb4cb55711",
+    "width": 1200,
+    "height": 900,
+    "bytes": 39394
+  },
+  "evaluation": {
+    "source": "output/illustration-weight-study-2026-11-05/round-c2-family/orphlux-3C.png",
+    "source_sha256": "969314db9a157f68f3dcc2c5b1a2660bf52cfcb6a8df8e378d8d4c17c8627a37",
+    "width": 1200,
+    "height": 900,
+    "bytes": 41758
+  },
+  "dataset-world": {
+    "source": "output/dataset-illustration-study-2026-11-05/brand-glass/WC-brand.png",
+    "source_sha256": "be6a936e9e6e5264309b2e9765001019ece25ee87e706fbb156bf9fef4ad22bf",
+    "width": 1200,
+    "height": 900,
+    "bytes": 72424
+  },
+  "dataset-reasoning": {
+    "source": "output/dataset-illustration-study-2026-11-05/brand-glass/RC-brand.png",
+    "source_sha256": "84293d0e3e60cb11c15dc2ff46f00aeac9252a04e1692a5e3bbd29a87333eb6c",
+    "width": 1200,
+    "height": 900,
+    "bytes": 45266
+  },
+  "dataset-gui": {
+    "source": "output/dataset-illustration-study-2026-11-05/brand-glass/UC-brand.png",
+    "source_sha256": "bc8e41428d590c8afa43ca09302c7ac22c9dfcbfbff70034f7122452b0e937c5",
+    "width": 1200,
+    "height": 900,
+    "bytes": 52770
+  }
+}

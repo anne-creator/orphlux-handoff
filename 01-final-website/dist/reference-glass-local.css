@@ -1,0 +1,95 @@
+/* Local VEX reference treatment. Keep the current content and illustration geometry. */
+.reference-atmosphere{position:absolute;inset:0;z-index:-3;overflow:hidden;pointer-events:none;background:#020304 url('/reference-atmosphere-poster.svg') center/cover no-repeat}
+.reference-atmosphere video{display:block;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.reference-atmosphere video[data-ready=true]{opacity:1}
+/* Sparse starfield A is independent of the original corner animation.
+   Mask only the video/poster in source-cover coordinates, leaving the new stars
+   unfiltered. The old JS center mask is redundant with these corner-only windows. */
+.hero>.reference-atmosphere{visibility:visible;filter:none;mask-image:none!important;-webkit-mask-image:none!important;background:#020304 url('/sparse-stars-A.png') center/cover no-repeat}
+.hero>.reference-atmosphere::before{content:'';position:absolute;inset:0;background:url('/reference-atmosphere-poster.svg') center/cover no-repeat}
+.hero>.reference-atmosphere video{position:relative}
+.hero>.reference-atmosphere video,.hero>.reference-atmosphere::before{
+  filter:url(#hero-atmosphere-details);
+  -webkit-mask-image:url('/reference-corners-mask.svg');mask-image:url('/reference-corners-mask.svg');
+  -webkit-mask-size:cover;mask-size:cover;-webkit-mask-position:center;mask-position:center;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+}
+.hero>.hero-light,.hero>.grain{display:none}
+/* One group opacity also includes the transparent numeral/line overlay. */
+.hero .hero-art{opacity:.8}
+
+/* The same 4px blur, dark translucent fill and masked edge as the reference. */
+.site-nav,
+.dark-home .button.secondary,
+.dark-home .menu,
+.dark-home .open-data-band .inline-link{
+  background:rgba(0,0,0,.4);
+  background-blend-mode:luminosity;
+  -webkit-backdrop-filter:blur(4px);
+  backdrop-filter:blur(4px);
+  border:0;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.1);
+}
+.site-nav::before,
+.dark-home .button.secondary::before,
+.dark-home .menu::before,
+.dark-home .open-data-band .inline-link::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;padding:1.4px;
+  background:linear-gradient(180deg,rgba(255,255,255,.3) 0%,rgba(255,255,255,.1) 20%,transparent 40%,transparent 60%,rgba(255,255,255,.1) 80%,rgba(255,255,255,.3) 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+}
+.site-nav{top:24px;height:56px;padding:8px 16px;border-radius:12px}
+.site-nav nav{gap:32px;font:400 14px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif}
+/* Current location is expressed by type, without a decorative status dot. */
+.site-nav nav a{color:#b9bdc4;font-weight:400;transition:color .18s ease}
+.site-nav nav a[aria-current=page]{color:#f1f2f3;font-weight:500}
+.site-nav nav a[aria-current=page]::after{content:none;display:none;box-shadow:none}
+.site-nav nav a:hover,.site-nav nav a:focus-visible{color:#f1f2f3}
+@media(prefers-reduced-motion:reduce){.site-nav nav a{transition:none}}
+.dark-home .button,
+.dark-home .nav-contact,
+.dark-home #contact-form .button,
+.dark-home .open-data-band .inline-link{
+  position:relative;overflow:hidden;border-radius:8px;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500;
+  transition:background-color .2s ease,color .2s ease,box-shadow .2s ease;
+}
+.dark-home .button{min-height:48px;min-width:0;padding:12px 32px;font-size:16px;line-height:1.5}
+body.dark-home [data-contact][data-contact],
+body.dark-home #contact-form .button{
+  background:#fff;color:#000;border:0;box-shadow:none;
+}
+body.dark-home [data-contact][data-contact]:hover,
+body.dark-home #contact-form .button:hover{background:#f3f4f6;color:#000;border:0}
+body.dark-home [data-contact][data-contact]:active,
+body.dark-home #contact-form .button:active{background:#e5e7eb;color:#000}
+body.dark-home [data-contact][data-contact]:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.dark-home .site-nav .nav-contact{padding:8px 24px;min-height:36px;font-size:14px;line-height:20px}
+.dark-home .button.secondary{color:#fff}
+.dark-home .button.secondary:hover,
+.dark-home .open-data-band .inline-link:hover{background:#fff;color:#000}
+.dark-home .button.secondary:hover::before,
+.dark-home .open-data-band .inline-link:hover::before{opacity:0}
+html:not(.motion-off) .dark-home .button:hover,
+html:not(.motion-off) .dark-home .nav-contact:hover{translate:0 0;box-shadow:none}
+
+/* Replace the red dataset strip with the reference's fine white lines and stars. */
+.dark-home .open-data-band{background:#020304;border-color:#ffffff1c;isolation:isolate}
+.dark-home .open-data-band::before,.dark-home .open-data-band::after{display:none}
+.open-data-band .reference-atmosphere{z-index:-1}
+.dark-home .open-data-band .open-data{position:relative;z-index:1}
+.dark-home .open-data-band .inline-link{padding:12px 24px;min-height:48px;align-items:center;justify-content:center;color:#fff;line-height:1.5}
+.dark-home .open-data-band .inline-link span{color:inherit}
+
+@media(max-width:900px) and (min-width:721px){.site-nav nav{gap:18px;font-size:13px}.dark-home .site-nav .nav-contact{padding:8px 16px}}
+@media(max-width:720px){
+  .site-nav{top:24px;left:24px;right:24px;padding:8px 12px;gap:10px;height:56px;overflow:visible}
+  .site-nav nav{background:rgba(0,0,0,.8);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border:1px solid #ffffff30}
+  .dark-home .site-nav .nav-contact{padding:8px 12px;font-size:12px;line-height:18px;min-height:36px}
+  .dark-home .menu{position:relative;overflow:hidden;border-radius:8px;font:400 12px/18px 'Helvetica Neue',Helvetica,Arial,sans-serif;padding:9px 10px}
+  .dark-home .button{padding:12px 22px;font-size:14px}
+  .dark-home .open-data-band .inline-link{font-size:14px;padding:12px 18px}
+}
+@media(max-width:370px){.site-nav{left:16px;right:16px;gap:8px;padding:8px 10px}.dark-home .site-nav .nav-contact{padding:8px 9px}.site-nav .wordmark{font-size:14px;gap:6px;letter-spacing:.08em}.wordmark .brand-mark{width:22px;height:22px}}
+@media(prefers-reduced-motion:reduce){.reference-atmosphere video{display:none}.dark-home .button,.dark-home .nav-contact,.reference-atmosphere video{transition:none}}

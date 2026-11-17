@@ -1,0 +1,68 @@
+/* Reference smoke composition, using the existing OrphLux text and contact action. */
+.m12-smoke-video{display:none}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) .footer#contact{--u:calc(100vw / 1440);background:#000;color:#fff;box-sizing:border-box;min-height:100svh;padding:clamp(72px,10svh,112px) clamp(16px,2.083vw,30px) max(32px,4svh);display:flex;justify-content:center;isolation:isolate}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact>.grain,
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-endcap{display:none}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-inner{padding:0;max-width:1380px;width:100%}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-cta{position:relative;isolation:isolate;overflow:hidden;box-sizing:border-box;width:100%;min-height:clamp(300px,calc(340 * var(--u)),400px);padding:56px 24px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:30px;text-align:center;border:1px solid #f476686b;border-radius:20px;background:#090303 url('/m1-2-footer-smoke/plate.webp') right bottom/cover no-repeat}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-cta::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;box-shadow:inset 0 1px 0 #ffb3a333;background:linear-gradient(90deg,#0005,transparent 70%)}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .m12-smoke-video{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right bottom;opacity:0;transition:opacity 1s;pointer-events:none}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .m12-smoke-video.loaded{opacity:.8}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-cta h2{position:relative;z-index:2;margin:0;color:#fff;font-size:clamp(28px,calc(34 * var(--u)),42px);font-family:var(--meeting-display);font-weight:var(--meeting-weight);line-height:1.085;letter-spacing:var(--meeting-tracking)}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-cta h2 span{color:#fff}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-bottom{display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:64px;margin:0;padding:64px 0 32px;border-top:0;border-bottom:1px solid #fff3}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .signature{display:flex;flex-direction:column;align-items:flex-start;gap:22px;color:#fff}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-brand{font-size:22px;letter-spacing:.025em}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .signature>span:last-child{max-width:280px;font-size:12px;line-height:1.8;letter-spacing:.1em;color:#aaa}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-links nav{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;margin:0;gap:0;font-size:14px;color:#ddd}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-links a{min-height:38px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-links a:hover{text-decoration:underline;text-underline-offset:5px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact.smoke-entered .footer-cta{animation:smoke-frame 1.4s both}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact.smoke-entered h2{animation:smoke-rise .8s .15s both}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact.smoke-entered .footer-button{animation:smoke-pop .7s .5s both}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact.smoke-entered .signature{animation:smoke-rise .7s .7s both}
+@keyframes smoke-frame{from{border-color:transparent;clip-path:inset(0 50% round 20px)}to{border-color:#f476686b;clip-path:inset(0 round 20px)}}
+@keyframes smoke-rise{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+@keyframes smoke-pop{from{opacity:0;scale:.85}to{opacity:1;scale:1}}
+@media(max-width:800px){
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-bottom{gap:32px;padding-top:40px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-links{gap:20px}
+}
+@media(max-width:540px){
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) .footer#contact{padding:64px 16px max(36px,7vh)}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-cta{min-height:280px;padding:36px 18px;gap:28px;border-radius:16px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-cta h2{font-size:28px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-bottom{grid-template-columns:1fr;gap:28px;padding:32px 8px 20px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .signature{gap:12px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .signature>span:last-child{font-size:10px;max-width:none}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-links a{min-height:36px}
+}
+@media(prefers-reduced-motion:reduce){html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .m12-smoke-video{display:none}html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact *{animation:none!important;transition:none!important}}
+
+/* Reuse the Hero CTA theme; keep only placement specific to this card. */
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .m12-smoke-action{position:relative;z-index:2;margin:0;font-family:"Meeting Manrope",Plex,Arial,sans-serif;font-weight:600;letter-spacing:-.01em;line-height:1.4}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"])[data-meeting-font="plexmono"] #contact .m12-smoke-action{font-family:var(--meeting-display);font-weight:500}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-cta h2 span{font-family:inherit;font-weight:inherit}
+.m12-social-icon{display:none}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-social .ui-icon{display:none}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-social a{display:flex;align-items:center;gap:10px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .m12-social-icon{display:block;width:18px;height:18px;flex:none;fill:currentColor}
+
+/* One closing section: story, contact card, then utility links. */
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact #our-story{background:transparent;border:0;overflow:visible;margin:0 0 clamp(32px,5vh,56px);padding:0;min-height:0}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .brand-story-inner{padding:0 16px;display:grid;grid-template-columns:1fr 1.2fr;gap:8%;align-items:start}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .brand-story-heading h2{font-family:var(--meeting-display);font-weight:var(--meeting-weight);font-size:clamp(28px,2.5vw,36px);line-height:1.15;letter-spacing:var(--meeting-tracking)}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .brand-story-copy{padding:0;max-width:620px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .brand-story-copy p{font-family:"Meeting Manrope",Plex,Arial,sans-serif;font-size:clamp(16px,1.4vw,20px);line-height:1.65;color:#b8bdc6}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .brand-story-light{display:none}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .brand-story-heading h2 span{display:block}
+@media(max-width:600px){
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .brand-story-inner{grid-template-columns:1fr;gap:18px;padding:0 8px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .brand-story-heading h2{font-size:26px}
+html:is([data-m12-footer="smoke"],[data-m12-footer="sand"]) #contact .footer-bottom{padding-top:28px;gap:24px}
+}
+
+/* Sand shares the approved smoke layout and replaces only the background media. */
+html[data-m12-footer="sand"] #contact .footer-cta{background-image:url("/m1-2-footer-sand/poster.png")}
+html[data-m12-footer="sand"] #contact .m12-smoke-video.loaded{opacity:1}

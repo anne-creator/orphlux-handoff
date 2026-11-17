@@ -1,0 +1,22 @@
+/* Let the existing waterfall continue behind the metrics, without moving it. */
+.hero{border-bottom-color:transparent;overflow:visible}
+.hero-art{overflow:visible}
+.company-proof{position:relative;z-index:1;background:linear-gradient(to bottom,rgb(8 11 14 / 0%) 0%,rgb(8 11 14 / 55%) 15%,rgb(8 11 14 / 85%) 40%,#080b0e 75%);border-bottom-color:#252b32}
+.company-proof dl{width:100%;max-width:none;grid-template-columns:repeat(4,minmax(0,1fr));padding:42px 0}
+.company-proof dl>div,
+.company-proof dl>div:first-child{min-width:0;padding:0 clamp(16px,2vw,34px);align-items:center;text-align:center;border:0;position:relative}
+.company-proof dl>div+div::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:#252b32}
+.company-proof dd{color:var(--white)}
+.company-proof dd span{color:#c3cbd3}
+.company-proof dt{color:var(--copy);max-width:none}
+@media(max-width:720px){
+  .company-proof dl{grid-template-columns:repeat(2,minmax(0,1fr));padding:16px 0}
+  .company-proof dl>div,
+  .company-proof dl>div:first-child,
+  .company-proof dl>div:nth-child(even),
+  .company-proof dl>div:nth-child(n+3){padding:24px 16px;border:0}
+  .company-proof dl>div+div::before{display:none}
+  .company-proof dl>div:nth-child(even)::before{display:block;top:24px;bottom:24px}
+  .company-proof dl>div:nth-child(n+3)::after{content:"";position:absolute;left:16px;right:16px;top:0;height:1px;background:#252b32}
+  .company-proof dt{max-width:150px}
+}

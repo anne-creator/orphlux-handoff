@@ -1,0 +1,22 @@
+{
+  "reason": "Anne approved local homepage copy/layout over 2026-11-06 and requested deployment. Original business descriptions remain, except approved concise Hero. Decorative labels and OTS removed; brand story added.",
+  "removed_source_items": [
+    "End-to-end, high-quality data services for foundation models, embodied AI, and world models — collected in the real world, verified and annotated by domain experts, delivered ready for large-model training.",
+    "01 / SERVICES ALL SERVICES →",
+    "A · GENERATIVE AI",
+    "Learn more →",
+    "B · PHYSICAL AI",
+    "02 / DATASETS OFF-THE-SHELF",
+    "View all datasets →",
+    "OTS · 01",
+    "OTS · 02",
+    "OTS · 05",
+    "03 / RESEARCH RESEARCH →"
+  ],
+  "added_items": [
+    "We collect real-world data that domain experts verify and annotate, then deliver it ready for large-model training.",
+    "The story behind OrphLux",
+    "OrphLux takes its name from Orpheus, the musician of Greek myth.",
+    "Inspired by the harmony of his music, we turn unstructured data into expert-verified training data for AI."
+  ]
+}

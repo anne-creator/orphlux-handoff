@@ -1,0 +1,17 @@
+@import url("/banner-silver-local.css");
+
+/* Approved footer entrance light, softened from the image study. */
+.footer{
+  background-color:#050607;
+  background-image:radial-gradient(ellipse 100% 100% at 50% 0%,rgb(211 224 235 / 14%) 0%,rgb(151 169 183 / 7%) 42%,rgb(5 6 7 / 0%) 88%);
+  background-size:100% 440px;
+  background-repeat:no-repeat;
+}
+
+.footer-bottom .signature > .footer-brand{display:flex;align-items:center;gap:12px}
+.footer-brand-mark{display:block;width:28px;height:28px;flex-shrink:0}
+
+/* Keep the footer flush with the document end and at least one viewport tall. */
+.footer#contact{min-height:100svh;display:flex;flex-direction:column}
+.footer#contact .footer-inner{width:100%;box-sizing:border-box;margin:0 auto}
+.footer#contact .footer-endcap{width:100%;box-sizing:border-box;margin-top:auto}

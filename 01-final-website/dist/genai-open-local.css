@@ -1,0 +1,42 @@
+/* Local trial: independent heading, followed by three spacious text/image pairs. */
+#services .services-grid{display:block;padding-top:48px;padding-bottom:56px}
+#services .service-intro{display:block;border:0;padding:0;margin:0 0 12px}
+#services .service-intro h2{font-size:clamp(38px,4vw,60px);line-height:1.08;max-width:740px;letter-spacing:-.04em}
+#services .service-rows{padding:0 0 0 clamp(32px,5vw,80px);display:grid;gap:20px}
+#services .service-row{grid-template-columns:minmax(0,42fr) minmax(0,50fr);gap:8%;align-items:center;min-height:0;padding:8px 0!important;border:0}
+#services .row-copy{max-width:450px}
+#services .row-copy h3{font-size:clamp(28px,2.5vw,32px);line-height:1.18;letter-spacing:-.025em;max-width:450px}
+#services .row-copy p{font-size:18px;line-height:1.6;margin:18px 0 0;max-width:420px}
+#services .service-art{grid-column:2;width:100%;max-width:480px;height:260px;max-height:none;aspect-ratio:auto;object-fit:cover;justify-self:center;align-self:center;margin:0}
+@media(max-width:900px) and (min-width:721px){#services .service-rows{gap:24px}#services .service-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}#services .row-copy h3{font-size:27px}}
+@media(max-width:720px){
+ #services .services-grid{padding-top:42px;padding-bottom:56px}
+ #services .service-intro{margin-bottom:28px}
+ #services .service-intro h2{font-size:37px}
+ #services .service-rows{gap:24px;padding-left:18px}
+ #services .service-row{grid-template-columns:minmax(0,1fr);gap:8px;padding:0!important}
+ #services .row-copy{max-width:100%}
+ #services .row-copy h3{font-size:27px;max-width:100%}
+ #services .row-copy p{font-size:17px;margin-top:14px;max-width:440px}
+ #services .service-art{grid-column:1;width:min(100%,380px);height:220px;justify-self:center}
+}
+
+/* Full-height stage, with separate text travel and image replacement. */
+#services .service-row{opacity:1!important;transform:none!important;background:transparent!important;transition:none!important}
+#services.genai-scroll .services-grid{position:absolute;top:0;left:0;right:0;width:100%;height:100svh;box-sizing:border-box;display:flex;flex-direction:column;padding-top:clamp(40px,8svh,80px);padding-bottom:32px}
+#services.genai-scroll .service-intro{position:relative;z-index:2;isolation:isolate;flex:none;margin-bottom:24px;opacity:1!important;transform:none!important}
+#services.genai-scroll .service-rows{position:relative;flex:1;min-height:0;display:block;overflow:hidden;margin-left:clamp(32px,5vw,80px);padding:0;mask-image:linear-gradient(transparent,#000 7%,#000 93%,transparent)}
+#services.genai-scroll .service-row{position:absolute;inset:0;padding:0!important;pointer-events:none}
+#services.genai-scroll .row-copy{position:absolute;left:0;top:50%;width:42%;max-width:450px;transform:translateY(calc(-50% + var(--genai-copy-shift,0px)))}
+#services.genai-scroll .service-art{position:absolute;grid-column:auto;grid-row:auto;right:0;top:50%;width:52%;max-width:620px;height:auto;max-height:100%;object-fit:contain;transform:translateY(-50%)!important;opacity:var(--genai-image-opacity,0)!important;transition:opacity 160ms linear}
+main:has(#services.genai-scroll){overflow:clip}
+@media(max-width:900px){
+ #services.genai-scroll .services-grid{padding-top:32px;padding-bottom:24px}
+ #services.genai-scroll .service-rows{margin-left:18px;min-height:0}
+ #services.genai-scroll .service-row{display:flex;flex-direction:column;justify-content:center;gap:12px;transform:translateY(var(--genai-row-shift,0px))!important}
+ #services.genai-scroll .row-copy{position:static;width:100%;max-width:100%;transform:none}
+ #services.genai-scroll .service-art{position:static;transform:none!important;opacity:1!important;width:min(100%,420px);height:220px;max-height:45%;object-fit:contain;align-self:center}
+}
+
+#services.genai-scroll[data-genai-pin="active"] .services-grid{position:fixed}
+#services.genai-scroll[data-genai-pin="after"] .services-grid{top:auto;bottom:0}

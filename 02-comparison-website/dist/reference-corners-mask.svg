@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs><filter id="soft" x="-30%" y="-50%" width="160%" height="200%"><feGaussianBlur stdDeviation="12"/></filter></defs>
+<!-- Match the source video's cover coordinates. Keep upper corners and lower-left;
+     lower-right stays removed. Wide feathering retains the short moving star rays. -->
+<g fill="none" stroke="white" stroke-width="110" stroke-linecap="round" filter="url(#soft)">
+<path d="M-70 255H274Q314 255 346 223L485 84"/>
+<path d="M1990 255H1660Q1620 255 1588 223L1449 84"/>
+<path d="M-70 740H262Q302 740 334 772L498 936"/>
+</g></svg>

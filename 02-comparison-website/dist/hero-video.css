@@ -1,0 +1,7 @@
+.hero-art.has-video .hero-silk{transform:none!important;aspect-ratio:7/3;object-fit:cover}
+.hero-art .hero-video{opacity:0;transition:opacity .8s ease;pointer-events:none}
+.hero.video-playing .hero-video{opacity:var(--silk-opacity,1)}
+.hero [data-video-toggle]{z-index:3;min-height:44px;letter-spacing:0;border-radius:7px}
+@media(prefers-reduced-motion:reduce){.hero-art .hero-video{display:none}.hero [data-video-toggle]{display:none}}
+
+.hero .motion-control[hidden]{display:none!important}

@@ -1,0 +1,32 @@
+/* Shared across the dark homepage and dark reading pages. */
+:root{--brand-accent:#bc2f5e;--brand-hover:#a92853;--brand-active:#942348;--motion-feedback:160ms;--motion-arrow:180ms;--motion-dialog:220ms;--motion-ease:cubic-bezier(.22,1,.36,1);--pink:var(--brand-accent)}
+body [data-contact][data-contact],body #contact-form .button{background:var(--brand-accent);border-color:var(--brand-accent);color:#fff;box-shadow:none;transition:background-color var(--motion-feedback) ease,border-color var(--motion-feedback) ease}
+body [data-contact][data-contact]:hover,body #contact-form .button:hover{background:var(--brand-hover);border-color:var(--brand-hover);color:#fff}
+body [data-contact][data-contact]:active,body #contact-form .button:active{background:var(--brand-active);border-color:var(--brand-active);color:#fff}
+body [data-contact][data-contact]:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+body:not(.dark-home) [data-contact]:focus-visible{outline-color:#f5f5f6}
+.ui-icon{display:inline-block;width:1em;height:1em;flex-shrink:0;vertical-align:-.12em;stroke:currentColor;fill:none;transition:transform var(--motion-arrow) var(--motion-ease)}
+.close .ui-icon{width:24px;height:24px;vertical-align:middle}
+.menu .ui-icon{width:16px;height:16px}
+.footer-social a,.site-footer nav a{display:inline-flex;align-items:center;gap:5px}
+.capture-method .method-icon svg{stroke-linecap:round;stroke-linejoin:round}
+.illustrated-preview{background:#0c1116}
+dialog.pointer-open[open]{animation:dialog-arrive var(--motion-dialog) var(--motion-ease)}
+dialog.pointer-open[open]::backdrop{animation:backdrop-arrive var(--motion-dialog) ease-out}
+@keyframes dialog-arrive{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@keyframes backdrop-arrive{from{opacity:0}to{opacity:1}}
+@media(hover:hover) and (pointer:fine){a:hover .ui-icon[data-ui-icon="arrow-up-right"],button:hover .ui-icon[data-ui-icon="arrow-up-right"]{transform:translate(2px,-2px)}a:hover .ui-icon[data-ui-icon="arrow-right"]{transform:translateX(2px)}}
+@media(max-width:720px){.dark-home .menu .ui-icon{display:none}.dark-home .site-nav .nav-contact,.dark-home .menu{min-height:44px}}
+@media(prefers-reduced-motion:reduce){body [data-contact][data-contact],body #contact-form .button,.ui-icon{transition:none}dialog.pointer-open[open],dialog.pointer-open[open]::backdrop{animation:none}a:hover .ui-icon[data-ui-icon],button:hover .ui-icon[data-ui-icon]{transform:none}}
+.motion-off body [data-contact][data-contact],.motion-off #contact-form .button,.motion-off .ui-icon{transition:none}
+.motion-off dialog.pointer-open[open],.motion-off dialog.pointer-open[open]::backdrop{animation:none}
+.motion-off a:hover .ui-icon[data-ui-icon],.motion-off button:hover .ui-icon[data-ui-icon]{transform:none}
+
+.motion-control svg[hidden]{display:none}.motion-control .ui-icon{width:13px;height:13px;vertical-align:-2px}
+
+body:not(.dark-home) .contact-band [data-contact]:focus-visible{outline-color:#fff}
+
+.profile-illustration{display:block;width:100%;height:auto;aspect-ratio:400/260;object-fit:contain}
+
+/* Center the anchor's line box inside the full 44px mobile touch target. */
+.dark-home .site-nav .nav-contact{display:inline-flex;align-items:center;justify-content:center;text-align:center}

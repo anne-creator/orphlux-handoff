@@ -1,0 +1,54 @@
+/* Font families inherit the existing typography system. Only this variant changes. */
+#research[data-research-layout="stories"]{background:#08090b;color:#f3f4f4;overflow:clip;position:relative;isolation:isolate;padding:0}
+#research[data-research-layout="stories"]::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 0%,#24272b66,transparent 65%);pointer-events:none}
+#research .research-stories{box-sizing:border-box;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(64px,8svh,100px) 0 clamp(28px,4svh,60px)}
+#research .research-stories-header{width:min(calc(100% - 96px),900px);margin:0 auto clamp(26px,3svh,46px)}
+#research .research-stories-header h2{margin:0;color:#f3f4f4;font-size:clamp(38px,4.4vw,76px);font-weight:300;letter-spacing:0;line-height:1.08}
+#research .research-stories-header p{max-width:800px;margin:18px 0 0;color:#a7adb4;font-size:clamp(16px,1.25vw,21px);font-weight:420;line-height:1.55}
+#research .research-stories-rail{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:clamp(360px,min(40vw,56svh),620px);gap:clamp(28px,3vw,54px);overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:max(48px,calc((100vw - 1820px)/2 + 48px));padding:12px max(48px,calc((100vw - 1820px)/2 + 48px)) 20px;scrollbar-width:none}
+#research .research-stories-rail::after{content:"";width:max(0px,calc(100vw - clamp(360px,min(40vw,56svh),620px) - 96px - clamp(28px,3vw,54px)));pointer-events:none}
+#research .research-stories-rail::-webkit-scrollbar{display:none}
+#research .research-story{min-width:0;scroll-snap-align:start;opacity:.54;transform:translateY(10px);transition:opacity 260ms ease,transform 260ms ease;outline-offset:5px}
+#research .research-story:is(.is-active,:hover,:focus-within){opacity:1;transform:none}
+#research .research-story-media{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:12px;background:#14171b;box-shadow:0 18px 48px #0005}
+#research .research-story-content{padding:20px 20px 0}
+#research .research-story-category{margin:0 0 12px;color:#eee;font-size:15px;font-weight:760;line-height:1}
+#research .research-story-content h3{max-width:680px;margin:0;color:#e4e7ea;font-size:clamp(18px,1.22vw,24px);font-weight:520;letter-spacing:0;line-height:1.38}
+#research .research-story-status{display:block;margin-top:14px;color:#9da5ae;font-size:14px;line-height:1.4;letter-spacing:.03em}
+#research .research-stories-footer{display:flex;align-items:center;gap:20px;width:min(calc(100% - 96px),900px);margin:12px auto 0}
+#research .research-story-progress{display:flex;gap:8px;align-items:center;flex:1;max-width:400px}
+#research .research-story-progress span{height:3px;flex:1;border-radius:999px;background:#3b4148;transition:flex 260ms ease,background 260ms ease}
+#research .research-story-progress span.is-active{flex:4;background:#e6e8ea}
+#research .research-story-count{color:#9da5ae;font-size:14px;white-space:nowrap;font-variant-numeric:tabular-nums}
+#research .research-story-controls{display:flex;gap:8px;margin-left:auto}
+#research .research-story-controls button{font:inherit;color:#e4e7ea;border:1px solid #ffffff30;border-radius:50%;background:transparent;width:36px;height:36px;cursor:pointer;transition:background 260ms ease}
+#research .research-story-controls button:hover{background:#ffffff12}
+#research .research-story-controls button:disabled{opacity:.25;cursor:default}
+#research :is(.research-story,.research-stories-rail,.research-story-controls button):focus-visible{outline:1px solid #e7eaed}
+:root[data-paging="screens"] #research .research-stories{height:100%;min-height:0}
+@media(max-width:860px){
+ #research .research-stories{padding:100px 0 48px}
+ #research .research-stories-header,#research .research-stories-footer{width:min(calc(100% - 48px),900px)}
+ #research .research-stories-rail{grid-auto-columns:82vw;padding:10px 24px 24px;scroll-padding-inline:24px}
+ #research .research-stories-rail::after{display:none}
+ #research .research-story{opacity:1;transform:none}
+}
+@media(max-width:560px){
+ #research .research-stories-header,#research .research-stories-footer{width:calc(100% - 32px)}
+ #research .research-stories-header h2{font-size:38px}
+ #research .research-story-content{padding:18px 4px 0}
+ #research .research-stories-footer{gap:12px}
+ #research .research-story-progress{max-width:150px}
+}
+@media(prefers-reduced-motion:reduce){#research .research-story,#research .research-story-progress span,#research .research-story-controls button{transition:none;transform:none}}
+
+#research .research-stories>*{flex-shrink:0}
+/* Compact desktop heights retain the entire status line and controls. */
+@media(min-width:901px) and (max-height:800px){
+ #research .research-stories{padding-top:48px;padding-bottom:20px}
+ #research .research-stories-header{margin-bottom:22px}
+ #research .research-stories-header p{max-width:900px;margin-top:16px}
+ #research .research-stories-rail{grid-auto-columns:clamp(360px,min(40vw,52svh),620px)}
+ #research .research-stories-rail::after{width:max(0px,calc(100vw - clamp(360px,min(40vw,52svh),620px) - 96px - clamp(28px,3vw,54px)))}
+ #research .research-stories-footer{margin-top:8px}
+}

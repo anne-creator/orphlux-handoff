@@ -1,0 +1,26 @@
+/* Trial affects only existing solid-red CTAs. Secondary and utility controls keep their original styles. */
+html[data-m12-palette="hover-base"] body.dark-home :is(.button.primary,.nav-contact.nav-contact,.button.footer-button),
+html[data-m12-palette="hover-base"] body.dark-home #contact-form .button.button,
+html[data-m12-palette="hover-base"] body.dark-home section.open-data-band .inline-link {
+  --r1-button-bg:#a82853;
+  --r1-button-hover:#a82853;
+  background:#a82853;
+  border-color:#d6537d;
+  color:#fff;
+  box-shadow:none;
+}
+@media (hover:hover) {
+html[data-m12-palette="hover-base"] body.dark-home :is(.button.primary,.nav-contact.nav-contact,.button.footer-button):hover,
+html[data-m12-palette="hover-base"] body.dark-home #contact-form .button.button:hover,
+html[data-m12-palette="hover-base"] body.dark-home section.open-data-band .inline-link:hover {
+  background:#a82853;
+  border-color:#f47b9e;
+  box-shadow:0 0 12px #ee376acc,0 0 32px #bc2f5eaa,0 0 56px #bc2f5e55;
+}
+}
+html[data-m12-palette="hover-base"] body.dark-home :is(.button.primary,.nav-contact.nav-contact,.button.footer-button):active,
+html[data-m12-palette="hover-base"] body.dark-home #contact-form .button.button:active,
+html[data-m12-palette="hover-base"] body.dark-home section.open-data-band .inline-link:active {background:#902145;box-shadow:inset 0 1px 3px #0005,0 0 24px #bc2f5e80}
+html[data-m12-palette="hover-base"] body.dark-home :is(.button.primary,.nav-contact.nav-contact,.button.footer-button):focus-visible,
+html[data-m12-palette="hover-base"] body.dark-home #contact-form .button.button:focus-visible,
+html[data-m12-palette="hover-base"] body.dark-home section.open-data-band .inline-link:focus-visible {outline:2px solid #fff;outline-offset:4px;box-shadow:0 0 0 3px #140a0e,0 0 30px #bc2f5eaa}

@@ -1,0 +1,15 @@
+/* Motion enhances the existing layout; content is visible without JavaScript. */
+.dark-home .motion-control{z-index:3;min-height:44px;border-radius:7px;gap:9px;padding:8px 12px;backdrop-filter:blur(10px)}
+.dark-home .motion-symbol{width:12px;text-align:center;letter-spacing:0!important;margin:0!important}
+.dark-home .hero-silk{transform-origin:50% 65%}
+.dark-home .button,.dark-home .nav-contact{transition:translate .25s ease,background .2s ease,border-color .2s ease,box-shadow .25s ease}
+.dark-home .stock-art img{transition:scale .65s cubic-bezier(.2,.7,.2,1)}
+.dark-home .link-arrow,.dark-home .stock-link>span{transition:translate .3s ease}
+.dark-home .service-row{transition:background .35s ease}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  html:not(.motion-off) .dark-home .button:hover,html:not(.motion-off) .dark-home .nav-contact:hover{translate:0 -3px;box-shadow:0 8px 28px #0005}
+  html:not(.motion-off) .dark-home .stock-card:hover .stock-art img{scale:1.045}
+  html:not(.motion-off) .dark-home .capture-method:hover .link-arrow,html:not(.motion-off) .dark-home .stock-card:hover .stock-link>span{translate:3px -3px}
+  .dark-home .service-row:hover{background:#ffffff03}
+}
+@media(prefers-reduced-motion:reduce){.dark-home .hero-silk,.dark-home .hero-light{transform:none!important}.dark-home [data-motion-reveal]{transform:none!important;opacity:1!important}}

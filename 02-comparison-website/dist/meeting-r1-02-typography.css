@@ -1,0 +1,58 @@
+/* Local typography study. No artwork, numeral, or button color overrides. */
+@font-face{font-family:"Meeting Space";src:url("/meeting-r1-02-fonts/spacegrotesk.ttf") format("truetype");font-weight:300 700;font-display:swap}
+@font-face{font-family:"Meeting Manrope";src:url("/meeting-r1-02-fonts/manrope.ttf") format("truetype");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Meeting Sora";src:url("/meeting-r1-02-fonts/sora.ttf") format("truetype");font-weight:100 800;font-display:swap}
+:root{--meeting-display:"Meeting Space",Archivo,Arial,sans-serif;--meeting-weight:500;--meeting-tracking:-.045em}
+:root[data-meeting-font="manrope"]{--meeting-display:"Meeting Manrope",Archivo,Arial,sans-serif;--meeting-weight:500;--meeting-tracking:-.05em}
+:root[data-meeting-font="sora"]{--meeting-display:"Meeting Sora",Archivo,Arial,sans-serif;--meeting-weight:400;--meeting-tracking:-.055em}
+.hero h1,.page-section h2,.services h2,.story-section h2{font-family:var(--meeting-display);font-weight:var(--meeting-weight)}
+.hero .hero-copy{max-width:1120px;padding-top:clamp(158px,21.5svh,238px);padding-bottom:100px}
+.hero h1{font-size:clamp(58px,5.25vw,84px);line-height:1.085;letter-spacing:var(--meeting-tracking);margin:0 0 25px;font-synthesis:none}
+.hero h1>span{display:block}
+.hero .hero-lede{font-family:"Meeting Manrope",Plex,Arial,sans-serif;font-weight:400;font-size:clamp(17px,1.3vw,20px);line-height:1.65;letter-spacing:-.012em;max-width:720px;text-wrap:balance;margin:0 auto}
+.hero .hero-actions{margin-top:30px;gap:16px}
+.hero-actions .button{font-family:"Meeting Manrope",Plex,Arial,sans-serif;font-weight:600;letter-spacing:-.01em;line-height:1.4}
+@media(max-width:720px){
+ .hero .hero-copy{padding:clamp(146px,19svh,180px) 24px 100px}
+ .hero h1{font-size:clamp(35px,9.2vw,58px);line-height:1.12;letter-spacing:-.045em;margin-bottom:23px}
+ .hero h1>span:first-child{max-width:100%;text-wrap:balance}
+ .hero .hero-lede{max-width:450px;font-size:16px;line-height:1.65;letter-spacing:-.01em}
+ .hero .hero-actions{margin-top:26px;gap:12px}
+}
+@media(max-width:370px){.hero .hero-copy{padding-left:20px;padding-right:20px}.hero h1{font-size:32px}.hero .hero-lede{font-size:15px}.hero-actions .button{font-size:12px}}
+@media(max-height:650px) and (min-width:721px){.hero .hero-copy{padding-top:130px;padding-bottom:60px}.hero h1{font-size:54px;margin-bottom:20px}.hero .hero-lede{font-size:17px}.hero .hero-actions{margin-top:23px}}
+/* Opt-in review control, isolated from production buttons. */
+#meeting-r1-02-picker{position:fixed;z-index:1000;bottom:16px;right:16px;padding:10px 12px;background:#101216f2;border:1px solid #707781;border-radius:10px;color:#f3f4f6;font:12px/1.5 Arial,sans-serif;max-width:calc(100vw - 32px);box-shadow:0 4px 24px #0007}
+#meeting-r1-02-picker label{display:flex;align-items:center;gap:10px}
+#meeting-r1-02-picker select{font:inherit;color:#fff;background:#22262d;padding:6px;border:1px solid #69717d;border-radius:5px;max-width:190px}
+#meeting-r1-02-picker select:focus-visible{outline:2px solid white;outline-offset:3px}
+#meeting-r1-02-picker small{display:block;margin-top:5px;color:#b7bcc4}
+
+/* D: IBM Plex Mono 400/500 from Anne's Nomi reference, local font files. */
+@font-face{font-family:"Meeting Plex Mono";src:url("/meeting-r1-02-fonts/IBMPlexMono-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Meeting Plex Mono";src:url("/meeting-r1-02-fonts/IBMPlexMono-Medium.ttf") format("truetype");font-weight:500;font-display:swap}
+:root[data-meeting-font="plexmono"]{--meeting-display:"Meeting Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;--meeting-weight:500;--meeting-tracking:-.05em}
+:root[data-meeting-font="plexmono"] .hero-copy,
+:root[data-meeting-font="plexmono"] .hero-actions .button,
+:root[data-meeting-font="plexmono"] .hero .hero-lede,
+:root[data-meeting-font="plexmono"] .site-nav nav,
+:root[data-meeting-font="plexmono"] .site-nav .nav-contact,
+:root[data-meeting-font="plexmono"] .site-nav .menu{font-family:var(--meeting-display);font-synthesis:none;-webkit-font-smoothing:antialiased}
+:root[data-meeting-font="plexmono"] .hero .hero-lede{font-weight:400;letter-spacing:-.025em;max-width:800px}
+:root[data-meeting-font="plexmono"] .hero-actions .button{font-weight:500}
+@media(max-width:720px){
+ :root[data-meeting-font="plexmono"] .hero h1{font-size:clamp(24px,7.5vw,52px);letter-spacing:-.05em;line-height:1.18}
+ :root[data-meeting-font="plexmono"] .hero .hero-lede{font-size:15px;line-height:1.6}
+ :root[data-meeting-font="plexmono"] .hero-actions .button{font-size:13px;padding-inline:18px}
+}
+@media(max-width:370px){:root[data-meeting-font="plexmono"] .hero-actions .button{font-size:12px;padding-inline:13px}}
+
+/* Font A/B/C/D is a page-wide choice, including dynamically mounted sections. */
+:root[data-meeting-font] body,
+:root[data-meeting-font] body *,
+:root[data-meeting-font] body *::before,
+:root[data-meeting-font] body *::after{font-family:var(--meeting-display)!important}
+
+/* A: Sieve screenshot's display face, verified against the reference site's CSS. */
+@font-face{font-family:"Meeting Sieve";src:url("/meeting-r1-02-fonts/neue-machina-sieve.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+:root[data-meeting-font="sieve"]{--meeting-display:"Meeting Sieve",Arial,sans-serif;--meeting-weight:400;--meeting-tracking:-.025em}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Interface frames connect a pointer action to a selected screen region</title>
+  <g stroke="#dbe6ee" stroke-width="1" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="51" y="38" width="237" height="140" rx="5" stroke-opacity=".26"/>
+    <path d="M51 59h237 M65 48h3m5 0h3m5 0h3" stroke-opacity=".26"/>
+    <path d="M65 75h25m-25 11h42m-42 11h31" stroke-opacity=".17"/>
+    <rect x="85" y="60" width="237" height="140" rx="5" fill="#080c10" fill-opacity=".82" stroke-opacity=".56"/>
+    <path d="M85 81h237 M99 70h3m5 0h3m5 0h3" stroke-opacity=".42"/>
+    <rect x="119" y="82" width="237" height="140" rx="5" fill="#080c10" fill-opacity=".9" stroke-opacity=".85"/>
+    <path d="M119 105h237 M134 94h3m5 0h3m5 0h3" stroke-opacity=".47"/>
+    <path d="M171 105v117" stroke-opacity=".22"/>
+    <path d="M133 121h23m-23 13h17m-17 13h23m-23 13h17" stroke-opacity=".4"/>
+    <path d="M188 120h63m-63 7h44" stroke-opacity=".61"/>
+    <rect x="188" y="141" width="60" height="40" rx="2" fill="#dbe6ee" fill-opacity=".035" stroke-opacity=".29"/>
+    <rect x="263" y="141" width="75" height="40" rx="2" fill="#dbe6ee" fill-opacity=".055" stroke-opacity=".65"/>
+    <path d="M199 152h32m-32 8h21 M274 152h47m-47 8h32" stroke-opacity=".4"/>
+    <path d="M188 196h81m-81 8h56" stroke-opacity=".3"/>
+    <path d="M302 176l-4 29 10-7 8 13 6-4-8-13 11-4Z" fill="#10161c" stroke-opacity=".93" stroke-width="1.4"/>
+    <path d="M295 186c-23 5-34 19-61 19" stroke-opacity=".6" stroke-dasharray="3 5"/>
+  </g>
+  <g stroke="#BC2F5E" stroke-width="1.5" stroke-linecap="square"><path d="M259 148v-11h11 M331 137h11v11 M259 173v12h11 M331 185h11v-12"/></g>
+  <circle cx="231" cy="205" r="2" fill="#dbe6ee" fill-opacity=".75"/>
+</svg>
