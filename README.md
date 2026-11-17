@@ -1,20 +1,14 @@
-# OrphLux website handoff
+# OrphLux 代码与素材资料库
 
-Completed static website and design work, organized for the receiving team. Prepared by Anne on 2026-11-17.
+本仓库保存项目代码、历史素材及阶段文档。中文交接清单、Summary、AI 接手提示词与结算评估由 Anne 通过独立 ZIP 提供，不在公开仓库发布。
 
-[Final website](https://orphlux-editorial-anne.qubemc-7529.chatgpt.site/) · [Latest comparison website](https://orphlux-editorial-anne.qubemc-7529.chatgpt.site/compare/) · [Summary](SUMMARY.md)
+- [定稿网站](https://orphlux-editorial-anne.qubemc-7529.chatgpt.site/)
+- [比较网站](https://orphlux-editorial-anne.qubemc-7529.chatgpt.site/compare/)
+- [定稿代码](01-final-website/)
+- [比较版代码](02-comparison-website/)
+- [历史素材及下载索引](03-historical-materials/)
+- [阶段文档](04-stage-documents/)
 
-| Part | Files | Purpose |
-| --- | --- | --- |
-| 1 | [Final website source](01-final-website/) | Selected default, editable source and build instructions |
-| 2 | [Comparison website source](02-comparison-website/) | Separately runnable latest multi-version presentation |
-| 3 | [Historical materials](03-historical-materials/) | Version index and downloadable media archive |
-| 4 | [Stage documents](04-stage-documents/) | Research, proposals, reviews and delivery record |
+两个代码目录均可独立运行，具体操作见各自 README。技术依赖与当前功能边界见 [依赖说明](DEPENDENCIES-AND-LIMITS.md)。
 
-Each website folder can be opened independently from its own local HTTP server. Source is supplied through GitHub rather than separate code ZIPs. [Dependencies and limits](DEPENDENCIES-AND-LIMITS.md) describe external resources and outstanding integration items.
-
-## Availability
-
-Please clone the source and save the historical materials and documents for your records. Anne plans to remove the public code files one month after handover is completed. The completion date will be confirmed with the receiving team. This does not automatically remove existing clones or forks.
-
-Historical creative prompts and private correspondence are not part of this repository. A separately supplied handoff ZIP contains a new AI receiver README for continuing the project.
+请下载并自行保存资料。交接完成一个月后，Anne 会移除公开代码文件，完成日期以双方确认的交接时间为准。已下载或 fork 的第三方副本无法一并撤回。
